@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-export default function NextButtton({ dispatch, answer, index, numQuestions }) {
+import { useQuiz } from "../contexts/QuizContext";
+
+export default function NextButtton() {
+  const { dispatch, answer, index, numQuestions } = useQuiz();
   if (answer === null) return null;
   if (index < numQuestions - 1)
     return (

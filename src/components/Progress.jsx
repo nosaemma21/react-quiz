@@ -2,8 +2,11 @@
 /* eslint-disable no-unused-vars */
 
 import React from "react";
+import { useQuiz } from "../contexts/QuizContext";
 
-function Progress({ index, numQuestions, points, maxPossiblePoints, answer }) {
+function Progress() {
+  const { index, points, answer, numQuestions, maxPossiblePoints } = useQuiz();
+
   return (
     <header className="progress">
       <progress
